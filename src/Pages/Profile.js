@@ -40,7 +40,7 @@ const Profile = () => {
           </ul>
         </div>
         <div>
-          <label className="Personal_info">Contact Information</label>
+          <label className="Personal_info">Personal Information</label>
           <ul>
             <li>Gender: {user.gender}</li>
             <li>Age: {user.age}</li>
