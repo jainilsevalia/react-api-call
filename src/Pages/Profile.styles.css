@@ -1,0 +1,34 @@
+.container_profile{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #ffff;
+}
+
+.profile_pic{
+    height:300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic_img{
+    height: 100%;
+    width: 100%;
+}
+
+.profile_user_name{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.company_name{
+    font-size: 12px;
+    color: #878686;
+}
+
+.contact_info, .Personal_info{
+    font-size: 16px;
+    font-weight: 500;
+}
