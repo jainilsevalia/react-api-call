@@ -30,8 +30,7 @@ const Home = () => {
 
   return (
     <div>
-      <div>
-        <label>Search: </label>
+      <div className="searchbox">
         <input
           placeholder="Search User"
           type="text"
@@ -39,43 +38,45 @@ const Home = () => {
           onChange={handleSearch}
         />
       </div>
-      <div className="container_users">
-        {filterUser.map((user) => {
-          return (
-            <div>
-              <div className="card" onClick={() => handleClick(user._id)}>
-                <div
-                  className={`status-dot ${
-                    user.isActive ? "online" : "offline"
-                  }`}
-                >
-                  <span></span>
-                </div>
-                <div className="title_card_user">
-                  <div>
-                    <img className="card_img" src={user.picture} alt=""></img>
+      <div className="main-container">
+        <div className="container_users">
+          {filterUser.map((user) => {
+            return (
+              <div>
+                <div className="card" onClick={() => handleClick(user._id)}>
+                  <div
+                    className={`status-dot ${
+                      user.isActive ? "online" : "offline"
+                    }`}
+                  >
+                    <span></span>
                   </div>
-                  <div className="title_text">
+                  <div className="title_card_user">
                     <div>
-                      <span className="user_name">{user.name}</span>
+                      <img className="card_img" src={user.picture} alt=""></img>
                     </div>
-                    <span className="user_phone">Phone: {user.phone}</span>
-                    <span className="user_email">Email: {user.email}</span>
+                    <div className="title_text">
+                      <div>
+                        <span className="user_name">{user.name}</span>
+                      </div>
+                      <span className="user_phone">Phone: {user.phone}</span>
+                      <span className="user_email">Email: {user.email}</span>
+                    </div>
                   </div>
-                </div>
-                <div class="card-body">
-                  <div className="body_title">
-                    <span>{user.company}</span>
-                    <span>{user.balance}</span>
-                  </div>
-                  <div className="body_about">
-                    <span>About: {user.about}</span>
+                  <div class="card-body">
+                    <div className="body_title">
+                      <span>{user.company}</span>
+                      <span>{user.balance}</span>
+                    </div>
+                    <div className="body_about">
+                      <span>About: {user.about}</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

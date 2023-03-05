@@ -25,6 +25,8 @@ const Login = () => {
       .then((response) => {
         if (response.data.message === "Login success!") {
           navigate("/users");
+        } else {
+          alert("Invalid Credentials");
         }
         console.log(response.data);
       })
@@ -44,6 +46,7 @@ const Login = () => {
                 placeholder="username"
                 type="text"
                 id="username"
+                required
                 className="login_input"
                 value={formValues.username}
                 onChange={handleChange}
@@ -54,6 +57,7 @@ const Login = () => {
                 placeholder="Password"
                 type="password"
                 id="password"
+                required
                 className="login_input"
                 value={formValues.password}
                 onChange={handleChange}
