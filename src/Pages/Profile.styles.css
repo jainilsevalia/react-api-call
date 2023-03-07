@@ -15,7 +15,8 @@
 
 .profile-pic_img{
     height: 100%;
-    width: 100%;
+    width: 25%;
+    border-radius: 50%;
 }
 
 .profile_user_name{
@@ -31,4 +32,53 @@
 .contact_info, .Personal_info{
     font-size: 16px;
     font-weight: 500;
+}
+
+
+@media (max-width: 1025px){
+    .profile_pic{
+        height:150px;
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .profile-pic_img{
+        height: 100%;
+        width: 25%;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 670px){
+    .profile_pic{
+        height:75px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .profile-pic_img{
+        height: 100%;
+        width: 25%;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 400px){
+    .profile_pic{
+        height:50px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .profile-pic_img{
+        height: 100%;
+        width: 25%;
+        border-radius: 50%;
+    }
 }
